@@ -11,5 +11,13 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe StaticPagesHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe '#full_title' do
+    it "returns the default title" do
+      expect(helper.full_title).to eq('Geco USB')
+    end
+
+    it "returns the default title with the page title if provided" do
+      expect(helper.full_title("Home")).to eq ('Home | Geco USB')
+    end
+  end
 end
