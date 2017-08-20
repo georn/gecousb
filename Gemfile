@@ -46,6 +46,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'rails-controller-testing'
   gem 'faker', '~> 1.1.2'
   gem 'simplecov'
   gem 'simplecov-console'
