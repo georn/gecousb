@@ -11,14 +11,21 @@
 
 
 
-a.navbar-link {
+a.navbar-link, i.navbar-link {
   color: #2EA3F2 !important;
-  margin-top: 20px;
+  margin: 20px 0px;
   font-weight: bold;
-  font-size: 12pt;
   transition: all 0.7s;
-  margin-bottom: 20px;
+}
 
+i.navbar-link {
+  margin: 15px 0px;
+  background-color: white !important;
+}
+
+input[name="busqueda"] {
+  display: inline-block;
+  margin-top: 33px;
 }
 
 a.navbar-link:hover {
@@ -33,4 +40,21 @@ a.navbar-brand > img {
 
 #myNavbar {
   background-color: white;
+}
+
+div.navbar-collapse.collapse.in, div.navbar-collapse.collapsing, div.navbar-collapse.collapse.in::after {
+  text-align: center;
+  transition: all 0.7s;
+}
+
+// Media queries
+
+@media screen and (max-device-width: 767px) {
+  a.navbar-brand > img {
+    height: 30px;
+  }
+
+  a.navbar-link, i.navbar-link, input[name="busqueda"] {
+    margin: 0px 0px;
+  }
 }
