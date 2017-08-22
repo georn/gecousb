@@ -11,7 +11,6 @@ RSpec.describe StaticPagesController, type: :controller do
     it "renders the #home view" do
       get :home
       expect(response).to render_template :home
-      assert_select "title", "Home | GeCoUSB"
     end
   end
 
@@ -24,7 +23,6 @@ RSpec.describe StaticPagesController, type: :controller do
     it "renders the #about view" do
       get :home
       expect(response).to render_template :home
-      assert_select "title", "Sobre Nosotros | GeCoUSB"
     end
   end
 end
