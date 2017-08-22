@@ -1,11 +1,16 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "GecoUSB", root_path, id: "logo" %>
+<header class="navbar navbar-fixed-top navbar-light" style="height: 80px">
+  <div class="container navbar-flex">
+
+    <a class="navbar-brand" href="/" title="Inicio"><img class="img-responsive" src="/assets/logo-navbar.jpg" alt=""></a>
+
     <nav>
+      <ul class="nav navbar-nav navbar-left">
+        <li><a class="navbar-link" href="/inicio" alt="Inicio">Inicio</a></li>
+        <li><a class="navbar-link" href="/sobre-nosotros" alt="Sobre nosotros">Sobre Nosotros</a></li>
+      </ul>
+
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Inicio", root_path %></li>
-        <li><%= link_to "Sobre Nosotros", '#' %></li>
-        <li><%= link_to "Log in", '#' %></li>
+        <li><a class="navbar-link" href="/login" alt="Login">Login</a></li>
       </ul>
     </nav>
   </div>
