@@ -2,19 +2,31 @@
 @import "bootstrap";
 @import "font-awesome";
 
-
-// Header
-
+// Global
 * {
   font-family: 'Roboto', sans-serif;
 }
 
-
-
+// Navbar
 a.navbar-link, i.navbar-link {
   color: #2EA3F2 !important;
   margin: 20px 0px;
   font-weight: bold;
+  transition: all 0.7s;
+}
+
+a.navbar-link:hover {
+  background-color: #EEEEEC !important;
+  transition: all 0.7s;
+}
+
+a.navbar-brand > img {
+  height: 60px;
+  transform: translateY(-5px);
+}
+
+div.navbar-collapse.collapse.in, div.navbar-collapse.collapsing, div.navbar-collapse.collapse.in::after {
+  text-align: center;
   transition: all 0.7s;
 }
 
@@ -28,23 +40,8 @@ input[name="busqueda"] {
   margin-top: 33px;
 }
 
-a.navbar-link:hover {
-  background-color: #EEEEEC !important;
-  transition: all 0.7s;
-}
-
-a.navbar-brand > img {
-  height: 60px;
-  transform: translateY(-5px);
-}
-
 #myNavbar {
   background-color: white;
-}
-
-div.navbar-collapse.collapse.in, div.navbar-collapse.collapsing, div.navbar-collapse.collapse.in::after {
-  text-align: center;
-  transition: all 0.7s;
 }
 
 // Media queries
