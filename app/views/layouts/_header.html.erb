@@ -13,7 +13,7 @@
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-left">
-        <li><a class="navbar-link" href="/inicio" alt="Inicio">Inicio</a></li>
+        <li><a class="navbar-link" href="/" alt="Inicio">Inicio</a></li>
         <li><a class="navbar-link" href="/sobre-nosotros" alt="Sobre nosotros">Sobre Nosotros</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -21,7 +21,15 @@
           <a href="#" alt="Busqueda"><i class="fa fa-search fa-2x navbar-link" aria-hidden="true" style="background-color: none !important"></i></a>
         </li>
         <li><form><input type="search" name="busqueda" placeholder="MA1111"/></form></li>
-        <li><a class="navbar-link" href="/login" alt="Login">Login</a></li>
+        <li>
+          <!-- <a class="navbar-link" href="/login" alt="Login">Login</a> -->
+          <% if signed_in? %>
+            <p class="navbar-text">Signed in as: <%= current_user.email %></p>
+            <%= link_to 'Sign out', sign_out_path, class: "navbar-link", method: :delete %>
+          <% else %>
+            <%= link_to 'Sign in', sign_in_path, class: "navbar-link", alt: "Sign in" %>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
