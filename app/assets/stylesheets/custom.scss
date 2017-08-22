@@ -9,19 +9,21 @@
   font-family: 'Roboto', sans-serif;
 }
 
-li > a {
-  font-size: 12pt;
-  transition: background-color 0.7s;
-}
 
-li > a.navbar-link {
+
+a.navbar-link {
   color: #2EA3F2 !important;
   margin-top: 20px;
+  font-weight: bold;
+  font-size: 12pt;
+  transition: all 0.7s;
+  margin-bottom: 20px;
+
 }
 
 a.navbar-link:hover {
-  background-color: #EEEEEC;
-  transition: background-color 0.7s;
+  background-color: #EEEEEC !important;
+  transition: all 0.7s;
 }
 
 a.navbar-brand > img {
