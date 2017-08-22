@@ -7,7 +7,7 @@
   </head>
 
   <body>
-    <!-- <%= render 'layouts/header' %> -->
+    <%= render 'layouts/header' %>
     <% if signed_in? %>
       Signed in as: <%= current_user.email %>
       <%= button_to 'Sign out', sign_out_path, method: :delete %>
