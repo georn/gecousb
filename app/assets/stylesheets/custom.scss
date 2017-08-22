@@ -1,3 +1,30 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+
+// Header
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+li > a {
+  font-size: 12pt;
+  transition: background-color 0.7s;
+}
+
+li > a.navbar-link {
+  color: #2EA3F2 !important;
+  margin-top: 20px;
+}
+
+a.navbar-link:hover {
+  background-color: #EEEEEC;
+  transition: background-color 0.7s;
+}
+
+a.navbar-brand > img {
+  height: 60px;
+  transform: translateY(-5px);
+}
