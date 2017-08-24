@@ -9,7 +9,7 @@
     <div class="post">
       <h3><%= link_to post.title, post_path(post) %></h3>
       <p><%= post.content %></p>
-      <ul>
+      <ul class="post-actions">
         <li><%= link_to "Editar", edit_post_path(post)%></li>
         <li><%= link_to "Borrar", post_path(post), data: {
           confirm: "Estas seguro que deseas borrar: #{post.title}?" }, method: :delete%></li>
