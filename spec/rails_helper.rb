@@ -9,6 +9,7 @@ require 'rspec/rails'
 require 'capybara/rails'
 require 'clearance/rspec'
 require 'clearance/test_unit'
+require 'support/factory_girl'
 require 'faker'
 # Requires supporting ruby files with custom matchers and macros, etc, in
 # spec/support/ and its subdirectories. Files matching `spec/**/*_spec.rb` are
