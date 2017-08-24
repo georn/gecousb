@@ -46,11 +46,11 @@ group :development, :test do
   gem 'selenium-webdriver', '~> 2.35.1'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
+  gem 'faker'
 end
 
 group :test do
   gem 'rails-controller-testing'
-  gem 'faker', '~> 1.1.2'
   gem 'simplecov'
   gem 'simplecov-console'
   gem 'launchy', '~> 2.3.0'
