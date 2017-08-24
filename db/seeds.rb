@@ -8,8 +8,9 @@
 exit if !Rails.env.development?
 
 puts "Deleting the data"
-User.delete_all
 Post.delete_all
+User.delete_all
+
 
 puts "Creating User"
 user = FactoryGirl.create(:user, email: "12-10769@usb.com.ve")
