@@ -1,8 +1,8 @@
 FactoryGirl.define do
   factory :post do
-    title "SISTEMAS NO HOMOGÉNEOS. ECUACIÓN DIFERENCIAL LINEAL"
+    title { Faker::Lorem.sentence }
     course "MA-2115"
-    content "Text content for testing"
+    content { Faker::Lorem.paragraphs(4) }
     association(:user)
   end
 end
