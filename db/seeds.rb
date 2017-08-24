@@ -13,7 +13,7 @@ User.delete_all
 
 
 puts "Creating User"
-user = FactoryGirl.create(:user, email: "12-10769@usb.com.ve")
+user = FactoryGirl.create(:user, email: "12-10769@usb.ve")
 
 puts "Creating Post"
 15.times do

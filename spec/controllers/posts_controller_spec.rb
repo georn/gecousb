@@ -30,19 +30,65 @@ RSpec.describe PostsController, type: :controller do
     end
   end
 
-  describe 'GET destroy' do
-    xit "responds with 200" do
-      get :destroy, params: { id: @post }
+  describe "GET new" do
+    before do
+      sign_in
+    end
+
+    it "responds with 200" do
+      get :new
       expect(response).to have_http_status(200)
+    end
+
+    it "renders the #new view" do
+      get :new
+      expect(response).to render_template :new
+    end
+
+  end
+
+  describe "POST create" do
+    context "with valid attributes" do
+      before do
+        sign_in
+      end
+
+      it "creates a new post" do
+        expect {
+          post :create, params: { post: FactoryGirl.attributes_for(:post) }
+        }.to change(Post, :count).by(1)
+      end
+      it "redirects to the new post" do
+        post :create, params: { post: FactoryGirl.attributes_for(:post) }
+        expect(response).to redirect_to post_path(Post.last)
+      end
+    end
+
+    context "with invalid attributes" do
+      it "does not saves the new post" do
+        expect {
+          post :create, params: { post: FactoryGirl.attributes_for(:post) }
+        }.to_not change(Post, :count)
+      end
+      it "re-renders the new view" do
+        post :create, params: { post: FactoryGirl.attributes_for(:post) }
+        expect(response).to_not redirect_to post_path(:post)
+      end
+    end
+  end
+
+  describe 'DELETE destroy' do
+    before do
+      sign_in
     end
 
     it "deletes the post" do
       expect{
-        delete :destroy, params: { id: @post }
+        delete :destroy, params: { id: Post.first }
       }.to change(Post, :count).by(-1)
     end
 
-    xit "redirects to posts" do
+    it "redirects to posts" do
       expect(response).to redirect_to :show
     end
   end
