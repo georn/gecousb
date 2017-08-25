@@ -5,4 +5,8 @@ FactoryGirl.define do
     content { Faker::Lorem.paragraph(30) }
     association(:user)
   end
+
+  factory :invalid_post, parent: :post do
+    title nil
+  end
 end
