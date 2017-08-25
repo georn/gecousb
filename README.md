@@ -20,6 +20,38 @@ GECO, seeks to be that proposal.
 
 GECO website has been in operation for a couple of years at [Geco](http://gecousb.com.ve/) developed in Wordpress . The current project seeks to make the website of the student group independent from Wordpress it in order to not only keep its current platform but to growth and expand its services to Venezuelan undergraduate students.
 
+## MVP
+
+At first the MVP of this project is settle on avoiding feature regression, so the application needs to do the following:
+
+```
+
+As a student,
+so I can study my courses,
+I want to find the resources provided by the university community.
+
+As a student,
+so I can join GECO,
+I want to find information about the student group, members, and projects.
+
+As a student,
+so I can assist to teacher assistant's classes
+I want to find out information about the term schedules.
+
+As a student,
+so I can find out about the lastest updates in the student group on the website,
+I want to see the twitter feed on the website.
+```
+
+Later on, the project involves giving a platform to teacher's assistant
+
+```
+As a teacher's assistant,
+So I can give content to my students to study
+I want to be able to upload new posts with content related to the website.
+
+```
+
 ## Tech Stack
 - Ruby on Rails
 - RSpec
