@@ -3,7 +3,9 @@ FactoryGirl.define do
     code "MyString"
     department "MyString"
     careers "MyString"
-    courses_plan nil
-    post nil
+
+
+    association(:courses_plan)
+    association(:post)
   end
 end
