@@ -1,0 +1,14 @@
+<h1><%= @post.title %></h1>
+<h2><%= @post.course %></h2>
+<h3><%= @post.user.email %></h3>
+
+<p><%= @post.content %></p>
+
+<% if @post.user == current_user %>
+  <ul class="post-actions">
+    <li><%= link_to "Regresar", posts_path %> </li>
+    <li><%= link_to "Editar", edit_post_path(@post) %></li>
+    <li><%= link_to "Borrar", post_path(@post), data: {
+      confirm: "Estas seguro que deseas borrar: #{@post.title}?" }, method: :delete%></li>
+  </ul>
+<% end %>
