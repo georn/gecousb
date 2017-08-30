@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 20170829233109) do
   create_table "courses", force: :cascade do |t|
     t.string "code", limit: 6
     t.string "department", limit: 65
-    t.string "careers", limit: 4
     t.bigint "courses_plan_id"
     t.bigint "post_id"
     t.datetime "created_at", null: false

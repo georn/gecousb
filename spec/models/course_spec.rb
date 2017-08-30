@@ -14,8 +14,8 @@ RSpec.describe Course, type: :model do
     it "requires a department" do
       expect(course.errors[:department]).to include("can't be blank")
     end
-    it "requires a career" do
-      expect(course.errors[:careers]).to include("can't be blank")
-    end
+    # it "requires a career" do
+    #   expect(course.errors[:careers]).to include("can't be blank")
+    # end
   end
 end
