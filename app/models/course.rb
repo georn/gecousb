@@ -4,5 +4,4 @@ class Course < ApplicationRecord
 
   validates :code, presence: true
   validates :department, presence: true
-  validates :careers, presence: true
 end
