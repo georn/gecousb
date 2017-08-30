@@ -3,7 +3,8 @@ class CreateCoursesPlans < ActiveRecord::Migration[5.1]
     create_table :courses_plans do |t|
       t.date :start_date
       t.date :end_date
-      t.references :user, foreign_key: true
+      t.references :course
+      t.references :user
 
       t.timestamps
     end

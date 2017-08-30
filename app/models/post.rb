@@ -1,5 +1,6 @@
 class Post < ApplicationRecord
   belongs_to :user
+  belongs_to :course
 
   validates :user, presence: true # post.errors[:users] => ["must exist, can't be blank"] double validation needed?
   validates :title, presence: true, uniqueness: { scope: :user_id }

@@ -10,40 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170829233109) do
+ActiveRecord::Schema.define(version: 20170830221314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "courses", force: :cascade do |t|
     t.string "code", limit: 6
+    t.string "name", limit: 20
     t.string "department", limit: 65
-    t.bigint "courses_plan_id"
-    t.bigint "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["code"], name: "index_courses_on_code", unique: true
-    t.index ["courses_plan_id"], name: "index_courses_on_courses_plan_id"
-    t.index ["post_id"], name: "index_courses_on_post_id"
   end
 
   create_table "courses_plans", force: :cascade do |t|
     t.date "start_date"
     t.date "end_date"
+    t.bigint "course_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_courses_plans_on_course_id"
     t.index ["user_id"], name: "index_courses_plans_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
-    t.string "course"
+    t.bigint "course_id"
     t.text "content"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"
+    t.index ["course_id"], name: "index_posts_on_course_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -58,8 +57,4 @@ ActiveRecord::Schema.define(version: 20170829233109) do
     t.index ["remember_token"], name: "index_users_on_remember_token"
   end
 
-  add_foreign_key "courses", "courses_plans"
-  add_foreign_key "courses", "posts"
-  add_foreign_key "courses_plans", "users"
-  add_foreign_key "posts", "users"
 end
