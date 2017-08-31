@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :courses_plan do
+  factory :term do
     start_date { Date.today }
     end_date { 3.months.from_now.to_date }
 

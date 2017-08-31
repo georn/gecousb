@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170830221314) do
+ActiveRecord::Schema.define(version: 20170831200654) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,15 +24,11 @@ ActiveRecord::Schema.define(version: 20170830221314) do
     t.index ["code"], name: "index_courses_on_code", unique: true
   end
 
-  create_table "courses_plans", force: :cascade do |t|
-    t.date "start_date"
-    t.date "end_date"
-    t.bigint "course_id"
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_courses_plans_on_course_id"
-    t.index ["user_id"], name: "index_courses_plans_on_user_id"
+  create_table "courses_terms", id: false, force: :cascade do |t|
+    t.bigint "course_id", null: false
+    t.bigint "term_id", null: false
+    t.index ["course_id", "term_id"], name: "index_courses_terms_on_course_id_and_term_id"
+    t.index ["term_id", "course_id"], name: "index_courses_terms_on_term_id_and_course_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -46,6 +42,15 @@ ActiveRecord::Schema.define(version: 20170830221314) do
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
+  create_table "terms", force: :cascade do |t|
+    t.date "start_date"
+    t.date "end_date"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_terms_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -57,4 +62,5 @@ ActiveRecord::Schema.define(version: 20170830221314) do
     t.index ["remember_token"], name: "index_users_on_remember_token"
   end
 
+  add_foreign_key "terms", "users"
 end
