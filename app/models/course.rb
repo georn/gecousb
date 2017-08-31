@@ -1,5 +1,5 @@
 class Course < ApplicationRecord
-  # belongs_to :courses_plan
+  has_and_belongs_to_many :terms
   has_many :posts
 
   validates :code, presence: true
