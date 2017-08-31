@@ -8,16 +8,22 @@ describe Post do
         post.valid?
       end
 
-      it "requires a user" do
+      it "requires a user existence" do
         expect(post.errors[:user]).to include("must exist")
       end
-      it "requires a title" do
+      it "requires a user to not be blank" do
+        expect(post.errors[:user]).to include("can't be blank")
+      end
+      it "requires a title to not be blank" do
         expect(post.errors[:title]).to include("can't be blank")
       end
-      it "requires a course" do
+      it "requires a course existence" do
+        expect(post.errors[:course]).to include("must exist")
+      end
+      it "requires a course to not be blank" do
         expect(post.errors[:course]).to include("can't be blank")
       end
-      it "requires content" do
+      it "requires content to not be blank" do
         expect(post.errors[:content]).to include("can't be blank")
       end
       it "requires the title to be unique for the same user" do

@@ -1,9 +1,9 @@
 FactoryGirl.define do
   factory :course do
-    code "MyString"
-    department "MyString"
+    code "MA2115"
+    department "Departamento de Matematicas Puras y Aplicadas"
 
-    association(:courses_plan)
+    association(:term)
     association(:post)
   end
 end
