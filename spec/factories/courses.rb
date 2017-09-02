@@ -1,9 +1,6 @@
 FactoryGirl.define do
   factory :course do
-    code "MA2115"
-    department "Departamento de Matematicas Puras y Aplicadas"
-
-    association(:term)
-    association(:post)
+    code { Faker::Lorem.characters(rand(1..6)) }
+    department { Faker::Lorem.sentence[0..rand(1..64)] }
   end
 end
