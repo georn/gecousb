@@ -1,21 +1,41 @@
 require 'rails_helper'
 
 RSpec.describe Term, type: :model do
-  let(:term) { Term.new }
+  let(:term) { create(:term) }
 
-  before do
-    term.valid?
+  describe "attributes" do
+    xit "has a start_date" do
+      expect(term).to respond_to(:start_date)
+    end
+    xit "has a end_date" do
+      expect(term).to respond_to(:end_date)
+    end
+    xit "has a user" do
+      expect(term).to respond_to(:user)
+    end
   end
 
   describe "validations" do
     it "requires a start date" do
-      expect(term.errors[:start_date]).to include("can't be blank")
+      is_expected.to validate_presence_of(:start_date)
     end
     it "requires a end date" do
-      expect(term.errors[:end_date]).to include("can't be blank")
+      is_expected.to validate_presence_of(:end_date)
     end
     it "requires a user" do
-      expect(term.errors[:user]).to include("must exist")
+      is_expected.to validate_presence_of(:user)
+    end
+    it "requires the existence of a user" do
+      is_expected.to validate_presence_of(:user).with_message(:required)
+    end
+  end
+
+  describe "associations" do
+    xit "belongs to a user" do
+      expect(term.user).to be_a(User)
+    end
+    xit "has a belongs to many courses" do
+      have_and_belong_to(:cour)
     end
   end
 end
