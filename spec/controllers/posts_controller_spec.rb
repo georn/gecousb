@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe PostsController, type: :controller do
 
   let(:user) { FactoryGirl.create(:user) }
-  let(:post) { FactoryGirl.create(:post, user: user) }
-  let(:invalid_post) { FactoryGirl.create(:invalid_post) }
+  let(:valid_post) { FactoryGirl.create(:post, user: user) }
+  let(:invalid_post) { FactoryGirl.create(:post, :invalid) }
 
   describe "GET index" do
     it "responds with 200" do
@@ -20,12 +20,12 @@ RSpec.describe PostsController, type: :controller do
 
   describe "GET show" do
     it "responds with 200" do
-      get :show, params: { id: post }
+      get :show, params: { id: valid_post }
       expect(response).to have_http_status(200)
     end
 
     it "renders the #show view" do
-      get :show, params: { id: post }
+      get :show, params: { id: valid_post }
       expect(response).to render_template :show
     end
   end
@@ -52,12 +52,12 @@ RSpec.describe PostsController, type: :controller do
     end
 
     it "responds with 200" do
-      get :edit, params: { id: post }
+      get :edit, params: { id: valid_post }
       expect(response).to have_http_status(200)
     end
 
     it "renders the #edit view" do
-      get :edit, params: { id: post.id }
+      get :edit, params: { id: valid_post.id }
       expect(response).to render_template :edit
     end
   end
@@ -69,7 +69,7 @@ RSpec.describe PostsController, type: :controller do
     end
 
     context "with valid attributes" do
-      it "creates a new post" do
+      it "creates a new valid_post" do
         expect {
           post :create
         }.to change(Post, :count).by(1)
@@ -83,11 +83,11 @@ RSpec.describe PostsController, type: :controller do
     context "with invalid attributes" do
       it "does not saves the new post" do
         expect {
-          post :create, params: { post: FactoryGirl.attributes_for(:invalid_post) }
+          post :create, params: { post: FactoryGirl.attributes_for(:post, :invalid) }
         }.to_not change(Post, :count)
       end
       it "re-renders the new view" do
-        post :create, params: { post: FactoryGirl.attributes_for(:invalid_post) }
+        post :create, params: { post: FactoryGirl.attributes_for(:post, :invalid) }
         expect(response).to_not redirect_to post_path(:post)
       end
     end
@@ -116,7 +116,7 @@ RSpec.describe PostsController, type: :controller do
 
     it "deletes the post" do
       expect{
-        delete :destroy, params: { id: post }
+        delete :destroy, params: { id: valid_post }
       }.to change(Post, :count).by(-1)
     end
 

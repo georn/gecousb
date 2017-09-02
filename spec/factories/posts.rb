@@ -6,7 +6,7 @@ FactoryGirl.define do
     association(:user)
   end
 
-  factory :invalid_post, parent: :post do
+  trait(:invalid) do
     title nil
   end
 end
