@@ -6,7 +6,7 @@ FactoryGirl.define do
 
     trait :with_courses do
       after(:create) do |term, evaluator|
-        terms { FactoryGirl.create_list(:course, rand(1..5), term: term) }
+        create_list(:course, 2, term_ids: term.id)
       end
     end
   end

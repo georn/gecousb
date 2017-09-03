@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Course, type: :model do
   let(:course) { create(:course) }
+  let(:course_with_posts) { create(:course, :with_posts) }
+  let(:course_with_terms) { create(:course, :with_terms) }
 
   describe "attributes"do
     it "has a code" do
@@ -23,13 +25,12 @@ RSpec.describe Course, type: :model do
 
   describe "associations" do
     it "have many posts" do
-      post1 = create(:post, course: course)
-      post2 = create(:post, course: course)
-      expect(course.posts).to include(post1, post2)
+      expect(course_with_posts.posts.count).to eq(2)
     end
-    xit "have and belongs to many terms" do
-      term1 = create(:term, course: course)
-      expect(course.terms).to include(term)
+    it "have and belongs to many terms" do
+      term = course_with_terms.terms.first
+      expect(course_with_terms.terms.count).to eq(2)
+      expect(term.courses.first).to eq(course_with_terms)
     end
   end
 end
