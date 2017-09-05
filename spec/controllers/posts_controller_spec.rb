@@ -65,17 +65,16 @@ RSpec.describe PostsController, type: :controller do
   describe "POST create" do
     before do
       sign_in_as(user)
-      p FactoryGirl.attributes_for(:post)
     end
 
     context "with valid attributes" do
       it "creates a new valid_post" do
         expect {
-          post :create
+          post :create, params: { post: { title: valid_post.title, course: valid_post.course, content: valid_post.content } }
         }.to change(Post, :count).by(1)
       end
       it "redirects to the new post" do
-        post :create, params: { post: FactoryGirl.attributes_for(:post) }
+        post :create, params: { post: { title: valid_post.title, course: valid_post.course, content: valid_post.content } }
         expect(response).to redirect_to post_path(Post.last)
       end
     end
@@ -83,11 +82,11 @@ RSpec.describe PostsController, type: :controller do
     context "with invalid attributes" do
       it "does not saves the new post" do
         expect {
-          post :create, params: { post: FactoryGirl.attributes_for(:post, :invalid) }
+          post :create, params: { post: { title: invalid_post.title, course: invalid_post.course, content: invalid_post.content } }
         }.to_not change(Post, :count)
       end
       it "re-renders the new view" do
-        post :create, params: { post: FactoryGirl.attributes_for(:post, :invalid) }
+        post :create, params: { post: { title: invalid_post.title, course: invalid_post.course, content: invalid_post.content } }
         expect(response).to_not redirect_to post_path(:post)
       end
     end
@@ -96,7 +95,6 @@ RSpec.describe PostsController, type: :controller do
   describe "PUT update" do
     before do
       sign_in
-      post
     end
 
     context "with valid attributes" do
@@ -111,7 +109,6 @@ RSpec.describe PostsController, type: :controller do
   describe 'DELETE destroy' do
     before do
       sign_in_as(user)
-      post
     end
 
     it "deletes the post" do
