@@ -1,0 +1,104 @@
+<!-- <nav class="navbar navbar-default" style="height: 80px, background-color: white !important">
+  <div class="container-fluid" style="background-color: white !important">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/" title="Inicio"><img class="img-responsive" src="/assets/logo-navbar.jpg" alt=""></a>
+    </div>
+
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-left">
+        <li><a class="navbar-link" href="/" alt="Inicio">Inicio</a></li>
+        <li><a class="navbar-link" href="/sobre-nosotros" alt="Sobre nosotros">Sobre Nosotros</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#" alt="Busqueda"><i class="fa fa-search fa-2x navbar-link" aria-hidden="true" style="background-color: none !important"></i></a>
+        </li>
+        <li><form><input type="search" name="busqueda" placeholder="MA1111"/></form></li>
+        <li>
+          <a class="navbar-link" href="/login" alt="Login">Login</a>
+          <% if signed_in? %>
+            <p class="navbar-text">Signed in as: <%= current_user.email %></p>
+            <%= button_to 'Sign out', sign_out_path, class: "navbar-button", method: :delete %>
+          <% else %>
+            <%= link_to 'Sign in', sign_in_path, class: "navbar-link", alt: "Sign in" %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+<!-- <nav class="navbar navbar-expand-md navbar-light fixed-top py-2">
+  <div class="container">
+    <a href="/" class="navbar-brand">
+      <img src="/assets/logo-navbar.jpg" width="65" height="50" alt="">
+      <h3 class="d-inline align-middle">GecoUSB</h3>
+    </a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="/" class="nav-link">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a href="/sobre-nosotros" class="nav-link">Sobre Nosotros</a>
+        </li> -->
+        <!-- CLEARANCE -->
+        <!-- <% if signed_in? %>
+          <li class="nav-item"> -->
+            <!-- <p class="navbar-text">Signed in as: <%= current_user.email %></p> -->
+            <!-- <%= link_to 'Sign out', sign_out_path, class: "navbar-link", method: :delete %> -->
+            <!-- <a href="<%= sign_out_path %>" class="nav-link">Salir</a>
+          </li>
+        <% else %>
+          <li class="nav-item"> -->
+            <!-- <%= link_to 'Sign in', sign_in_path, class: "navbar-link", alt: "Sign in" %> -->
+            <!-- <a href="<%= sign_in_path %>" class="nav-link">Entrar</a>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-sm navbar-light p-0">
+  <div class="container">
+    <a href="index.html" class="navbar-brand">Geco</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a href="/" class="nav-link">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a href="/sobre-nosotros" class="nav-link">Nosotros</a>
+        </li>
+        <% if signed_in? %>
+        <li class="nav-item">
+          <!-- <i class="fa fa-user-times block-inline"></i> -->
+          <%= button_to 'Salir', sign_out_path, class: "btn btn-link nav-link block-inline", method: :delete %>
+        </li>
+        <% else %>
+        <li class="nav-item">
+          <a href="<%= sign_in_path %>" class="nav-link">
+            <i class="fa fa-user"></i> Ingresa
+          </a>
+        </li>
+        <% end %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

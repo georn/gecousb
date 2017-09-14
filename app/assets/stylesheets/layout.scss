@@ -1,15 +1,10 @@
 $primary: #306090;
 
-// body {
-//   margin-top: 80px;
-// }
-
 // NAVBAR
 .navbar {
   box-shadow: 2px 2px 5px $primary;
-  // opacity: 0.9;
-  // background: #fff;
-  // font-family: 'Roboto', sans-serif;
+  opacity: .9;
+  font-family: 'Roboto', sans-serif;
 
   .nav-link {
     font-size: 14px;
@@ -22,10 +17,10 @@ $primary: #306090;
     border-left: #444 3px solid;
   }
 
-  // .nav-item {
-  //   font-size: 1.0rem;
-  //   padding-right: 20px;
-  // }
+  .nav-item {
+    font-size: 1.0rem;
+    padding-right: 10px;
+  }
 }
 
 #main-footer {
