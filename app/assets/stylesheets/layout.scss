@@ -1,0 +1,29 @@
+$primary: #306090;
+
+// NAVBAR
+.navbar {
+  box-shadow: 2px 2px 5px $primary;
+  opacity: .9;
+  font-family: 'Roboto', sans-serif;
+
+  .nav-link {
+    font-size: 14px;
+    padding-left: 1em;
+    padding-right: 1em;
+    text-transform: uppercase;
+  }
+
+  .nav-item.active {
+    border-left: #444 3px solid;
+  }
+
+  .nav-item {
+    font-size: 1.0rem;
+    padding-right: 10px;
+  }
+}
+
+#main-footer {
+  margin-top: 80px;
+  background-color: $primary;
+}
