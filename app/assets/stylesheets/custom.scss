@@ -1,57 +1,57 @@
-@import "bootstrap-sprockets";
+// @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
 
 // Global
-* {
-  font-family: 'Roboto', sans-serif;
-}
+// * {
+//   font-family: 'Roboto', sans-serif;
+// }
 
 // Navbar
-a.navbar-link, i.navbar-link {
-  color: #2EA3F2 !important;
-  margin: 20px 0px;
-  font-weight: bold;
-  transition: all 0.7s;
-}
-
-a.navbar-link:hover {
-  background-color: #EEEEEC !important;
-  transition: all 0.7s;
-}
-
-a.navbar-brand > img {
-  height: 60px;
-  transform: translateY(-5px);
-}
-
-div.navbar-collapse.collapse.in, div.navbar-collapse.collapsing, div.navbar-collapse.collapse.in::after {
-  text-align: center;
-  transition: all 0.7s;
-}
-
-i.navbar-link {
-  margin: 15px 0px;
-  background-color: white !important;
-}
-
-input[name="busqueda"] {
-  display: inline-block;
-  margin-top: 33px;
-}
-
-#myNavbar {
-  background-color: white;
-}
-
-// Media queries
-
-@media screen and (max-device-width: 767px) {
-  a.navbar-brand > img {
-    height: 30px;
-  }
-
-  a.navbar-link, i.navbar-link, input[name="busqueda"] {
-    margin: 0px 0px;
-  }
-}
+// a.navbar-link, i.navbar-link {
+//   color: #2EA3F2 !important;
+//   margin: 20px 0px;
+//   font-weight: bold;
+//   transition: all 0.7s;
+// }
+//
+// a.navbar-link:hover {
+//   background-color: #EEEEEC !important;
+//   transition: all 0.7s;
+// }
+//
+// a.navbar-brand > img {
+//   height: 60px;
+//   transform: translateY(-5px);
+// }
+//
+// div.navbar-collapse.collapse.in, div.navbar-collapse.collapsing, div.navbar-collapse.collapse.in::after {
+//   text-align: center;
+//   transition: all 0.7s;
+// }
+//
+// i.navbar-link {
+//   margin: 15px 0px;
+//   background-color: white !important;
+// }
+//
+// input[name="busqueda"] {
+//   display: inline-block;
+//   margin-top: 33px;
+// }
+//
+// #myNavbar {
+//   background-color: white;
+// }
+//
+// // Media queries
+//
+// @media screen and (max-device-width: 767px) {
+//   a.navbar-brand > img {
+//     height: 30px;
+//   }
+//
+//   a.navbar-link, i.navbar-link, input[name="busqueda"] {
+//     margin: 0px 0px;
+//   }
+// }
