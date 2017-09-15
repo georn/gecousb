@@ -34,6 +34,14 @@ div.container-fluid.no-padding, div.col-lg-12.col-md-12.col-sm-12.col-xs-12.no-p
   padding: 0px 0px !important;
 }
 
+div.slide-overlay {
+  background-color: rgba(136, 138, 133, 0.4);
+  height: inherit;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: auto 0px !important;
+}
+
 // HOME ICONS
 #icons {
   .fa {
