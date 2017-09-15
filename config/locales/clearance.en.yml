@@ -49,11 +49,11 @@ en:
       title: Reset your password
   sessions:
     form:
-      forgot_password: Forgot password?
-      sign_up: Sign up
+      forgot_password: Olvidé mi contraseña
+      sign_up: Crear usuario
     new:
-      title: Sign in
+      title: Iniciar sesión
   users:
     new:
-      sign_in: Sign in
-      title: Sign up
+      sign_in: Iniciar sesión
+      title: Registro
