@@ -34,6 +34,15 @@ nav.navbar.navbar-expand-sm.navbar-light.p-0 {
 // FOOTER
 #main-footer {
   background-color: $primary;
+
+  div.social-icons {
+    text-align: right;
+
+    i {
+      padding: 7px 5px 0px 5px;
+    }
+  }
 }
+
 
 
