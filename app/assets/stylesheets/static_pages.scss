@@ -102,8 +102,12 @@ div.slide-overlay {
       }
     }
 
-    a {
-      color: white;
+    div.other-links{
+        a {
+        color: white;
+        font-size: 0.7rem;
+        text-decoration: none;
+      }
     }
   }
 
