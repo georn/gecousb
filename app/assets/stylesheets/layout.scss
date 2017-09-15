@@ -35,11 +35,16 @@ nav.navbar.navbar-expand-sm.navbar-light.p-0 {
 #main-footer {
   background-color: $primary;
 
+  p {
+    font-size: 11pt;
+    padding-top: 5px;
+  }
+
   div.social-icons {
     text-align: right;
 
     i {
-      padding: 7px 5px 0px 5px;
+      padding: 0px 5px 0px 5px;
     }
   }
 
@@ -52,7 +57,7 @@ nav.navbar.navbar-expand-sm.navbar-light.p-0 {
 
   div.col-xs-12.d-block.d-sm-none.brand {
     margin: 0px auto;
-    font-size: 0.5rem;
+    font-size: 10pt;
     text-align: center !important;
   }
 }
