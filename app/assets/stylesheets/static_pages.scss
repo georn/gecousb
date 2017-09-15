@@ -36,3 +36,7 @@ $icon-size: 55px;
     font-size: $icon-size;
   }
 }
+
+li > form > button.btn.btn-link.nav-link > i {
+  padding: 0px 10px;
+}
