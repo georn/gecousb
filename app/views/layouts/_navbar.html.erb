@@ -98,8 +98,9 @@
         </li>
         <% if signed_in? %>
         <li class="nav-item">
-          <%= button_to 'Salir', sign_out_path, class: "btn btn-link nav-link", method: :delete %>
-          <i class="fa fa-user-times block-inline"></i>
+            <%= button_to sign_out_path, class: "btn btn-link nav-link", method: :delete do %>
+              <span>Salir </span><i class="fa fa-user-times"></i>
+            <% end %>
         </li>
         <% else %>
         <li class="nav-item">
