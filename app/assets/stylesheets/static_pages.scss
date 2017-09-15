@@ -39,7 +39,18 @@ div.container-fluid.no-padding, div.col-lg-12.col-md-12.col-sm-12.col-xs-12.no-p
   .fa {
     font-size: $icon-size;
   }
+
+  @media screen and (max-width: 768px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+    
+    p {
+      font-size: 0.8rem;
+    }
+  }
 }
+
 
 // NAVBAR
 li > form > button.btn.btn-link.nav-link > i {
