@@ -62,7 +62,7 @@ div.slide-overlay {
 // SIGN-IN 
 
 .signInView {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -75,10 +75,17 @@ div.slide-overlay {
     align-content: center;
     margin: auto 0px;
     background-color: rgba(48, 96, 144, 0.8);
-    height: 90%;
+    height: auto;
     width: auto;
-    padding: 0px 30px;
+    padding: 30px 30px;
     border-radius: 8px;
+
+    h2 {
+      color: white;
+      font-size: 25pt;
+      font-weight: bold;
+      text-align: center;
+    }
 
     .submit-field {
       margin: 20px auto;
