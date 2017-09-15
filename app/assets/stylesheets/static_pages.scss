@@ -40,3 +40,10 @@ $icon-size: 55px;
 li > form > button.btn.btn-link.nav-link > i {
   padding: 0px 10px;
 }
+
+
+
+
+div.container-fluid.no-padding, div.col-lg-12.col-md-12.col-sm-12.col-xs-12.no-padding {
+  padding: 0px 0px !important;
+}
