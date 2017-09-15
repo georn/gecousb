@@ -85,15 +85,29 @@
         <li class="nav-item">
           <a href="/sobre-nosotros" class="nav-link">Nosotros</a>
         </li>
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown">Preparadurias</a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">
+              <i class="fa fa-user-circle"></i> Lista de Preparadores
+            </a>
+            <a href="#" class="dropdown-item">
+              <i class="fa fa-gear"></i> Unete
+            </a>
+          </div>
+        </li>
         <% if signed_in? %>
         <li class="nav-item">
-          <!-- <i class="fa fa-user-times block-inline"></i> -->
-          <%= button_to 'Salir', sign_out_path, class: "btn btn-link nav-link block-inline", method: :delete %>
+          <%= button_to 'Salir', sign_out_path, class: "btn btn-link nav-link", method: :delete %>
+          <i class="fa fa-user-times block-inline"></i>
         </li>
         <% else %>
         <li class="nav-item">
+          <%= link_to 'Registrate', sign_up_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
           <a href="<%= sign_in_path %>" class="nav-link">
-            <i class="fa fa-user"></i> Ingresa
+            <i class="fa fa-sign-in"></i> Ingresa
           </a>
         </li>
         <% end %>

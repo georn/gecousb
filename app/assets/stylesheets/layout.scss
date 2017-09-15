@@ -19,10 +19,11 @@ $primary: #306090;
   }
 
   .nav-item.active {
-    border-left: #444 3px solid;
+    border-left: $primary 3px solid;
   }
 }
 
+// FOOTER
 #main-footer {
   background-color: $primary;
 }
