@@ -3,8 +3,8 @@ $primary: #306090;
 // NAVBAR
 .navbar {
   box-shadow: 2px 2px 5px $primary;
-  opacity: .9;
   font-family: 'Roboto', sans-serif;
+  opacity: .9;
 
   .nav-link {
     font-size: 14px;
@@ -13,17 +13,16 @@ $primary: #306090;
     text-transform: uppercase;
   }
 
-  .nav-item.active {
-    border-left: #444 3px solid;
+  .nav-item {
+    font-size: 1rem;
+    padding-right: 10px;
   }
 
-  .nav-item {
-    font-size: 1.0rem;
-    padding-right: 10px;
+  .nav-item.active {
+    border-left: #444 3px solid;
   }
 }
 
 #main-footer {
-  margin-top: 80px;
   background-color: $primary;
 }
