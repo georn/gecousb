@@ -1,3 +1,62 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$icon-size: 55px;
+
+// CAROUSEL
+.carousel-item {
+  height: 450px;
+}
+
+.carousel-image-1 {
+  background: url('https://pbs.twimg.com/media/CkIga8WWsAAl6dG.jpg:large');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carousel-image-2 {
+  background: url('https://scontent-dft4-1.cdninstagram.com/t51.2885-15/e35/19955252_1604460136232357_9162504812602851328_n.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carousel-image-3 {
+  background: url(http://gecousb.com.ve/wp-content/uploads/2017/04/final.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+div.container-fluid.no-padding, div.col-lg-12.col-md-12.col-sm-12.col-xs-12.no-padding {
+  padding: 0px 0px !important;
+}
+
+div.slide-overlay {
+  background-color: rgba(136, 138, 133, 0.4);
+  height: inherit;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: auto 0px !important;
+}
+
+// HOME ICONS
+#icons {
+  .fa {
+    font-size: $icon-size;
+  }
+
+  @media screen and (max-width: 768px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+    
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+

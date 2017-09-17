@@ -3,8 +3,8 @@ $primary: #306090;
 // NAVBAR
 .navbar {
   box-shadow: 2px 2px 5px $primary;
-  opacity: .9;
   font-family: 'Roboto', sans-serif;
+  opacity: .9;
 
   .nav-link {
     font-size: 14px;
@@ -13,17 +13,54 @@ $primary: #306090;
     text-transform: uppercase;
   }
 
-  .nav-item.active {
-    border-left: #444 3px solid;
-  }
-
   .nav-item {
-    font-size: 1.0rem;
+    font-size: 1rem;
     padding-right: 10px;
   }
+
+  .nav-item.active {
+    border-left: $primary 3px solid;
+  }
 }
 
-#main-footer {
-  margin-top: 80px;
-  background-color: $primary;
+li > form > button.btn.btn-link.nav-link > i {
+  padding: 0px 10px;
 }
+
+nav.navbar.navbar-expand-sm.navbar-light.p-0 {
+  z-index: 1 !important;
+}
+
+// FOOTER
+#main-footer {
+  background-color: $primary;
+
+  p {
+    font-size: 11pt;
+    padding-top: 5px;
+  }
+
+  div.social-icons {
+    text-align: right;
+
+    i {
+      padding: 0px 5px 0px 5px;
+    }
+  }
+
+  div.social-icons-xs {
+    margin: 0px auto;  
+    i {
+      padding: 0px 5px;
+    }
+  }
+
+  div.col-xs-12.d-block.d-sm-none.brand {
+    margin: 0px auto;
+    font-size: 10pt;
+    text-align: center !important;
+  }
+}
+
+
+
