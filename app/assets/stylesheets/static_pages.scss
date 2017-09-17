@@ -59,4 +59,57 @@ div.slide-overlay {
   }
 }
 
+// SIGN-IN 
 
+.signInView {
+  height: 79vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: center;
+  background-color: lightblue;
+
+  .formContainer {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    margin: auto 0px;
+    background-color: rgba(48, 96, 144, 0.8);
+    height: auto;
+    width: auto;
+    padding: 30px 30px;
+    border-radius: 8px;
+
+    h2 {
+      color: white;
+      font-size: 25pt;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .submit-field {
+      margin: 20px auto;
+    }
+  
+    .text-field, .password-field {
+      label {
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        color: white;
+      }
+    }
+
+    div.other-links{
+        a {
+        color: white;
+        font-size: 0.7rem;
+        text-decoration: none;
+      }
+    }
+  }
+
+  
+}
