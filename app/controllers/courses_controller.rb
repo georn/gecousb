@@ -2,14 +2,13 @@ require 'google/apis/drive_v2'
 require 'google/api_client/client_secrets'
 
 class CoursesController < ApplicationController
-
   def index
     redirect_to('/oauth2callback') unless session.key?(:credentials)
     client_opts = JSON.parse(session[:credentials])
     auth_client = Signet::OAuth2::Client.new(client_opts)
     drive = Google::Apis::DriveV2::DriveService.new
     geco_folder = drive.list_files(q: "title = 'GECO'", options: { authorization: auth_client })
-    @geco_content = drive.list_files(q: "'#{geco_folder.items.first.id}' in parents and mimeType = 'application/vnd.google-apps.folder'", options: { authorization: auth_client })
+    @geco_courses = drive.list_files(q: "'#{geco_folder.items.first.id}' in parents and mimeType = 'application/vnd.google-apps.folder'", options: { authorization: auth_client })
   end
 
   def show
