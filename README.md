@@ -86,15 +86,15 @@ At an early stage the [Clearance Gem](https://github.com/thoughtbot/clearance/) 
 
 ## Style
 
-For the styling of the website [Bootstrap 4 beta](https://github.com/twbs/bootstrap-rubygem), in order to take advantage of the grid system, responsiveness and new features such as [cards](https://v4-alpha.getbootstrap.com/components/card/). Given that the application is built on Rails, Sass comes by default and the new Bootstrap uses Sass as main preprocessor. 
+For the styling of the website [Bootstrap 4 beta](https://github.com/twbs/bootstrap-rubygem), in order to take advantage of the grid system, responsiveness and new features such as [cards](https://v4-alpha.getbootstrap.com/components/card/). Given that the application is built on Rails, Sass comes by default and the new Bootstrap uses Sass as main preprocessor. It adds to the use of the Asset Pipeline and partials that are used through the application.
 
-This of course may give the application that Bootstrap-ish look, but, hey, I'm not a designer.
+This may give the application that Bootstrap-ish look, but, hey, I'm not a designer.
 
-Homepage
+### Homepage
 ![Geco homepage](/geco-homepage.jpeg)
 
-Courses
-![Geco Courses]()
+### Courses
+![Geco Courses](/geco-courses-cards.jpeg)
 
 
 ## Drive
