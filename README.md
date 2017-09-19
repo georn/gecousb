@@ -49,17 +49,6 @@ I want to be able to upload new posts with content related to the course.
 
 ```
 
-## Tech Stack
-- Ruby on Rails
-- RSpec
-- Capybara
-- Factory Girl
-- Faker
-- Postgresql
-- HTML, CSS, Sass
-- Bootstrap 4
-- Google API
-
 # Progress
 
 ## Model
@@ -97,4 +86,17 @@ The image shows the gathering of the title from the courses in the Google Drive 
 
 ## Drive
 
-The drive implementation represented a challenge while theres documentation about the Google Client API there is not much regarding how to implement it to Rails. The [API for Ruby is on Alpha](https://developers.google.com/api-client-library/ruby/) meaning that heres not much support either, except the one given by Rubyst.
+The drive implementation represented a challenge while theres documentation about the Google Client API there is not much regarding how to implement it to Rails. The [API for Ruby is on Alpha](https://developers.google.com/api-client-library/ruby/) meaning that heres not much support either, except the one given by other Rubyst.
+
+**The objective is to populate the Courses in the database using the information on the drive to be able to take advantage of the relationship between Courses, Post and Term to arrive at an MVP. As well as to serve download links to the content of each course.**
+
+## Tech Stack
+- Ruby on Rails
+- RSpec
+- Capybara
+- Factory Girl
+- Faker
+- Postgresql
+- HTML, CSS, Sass
+- Bootstrap 4
+- Google API
